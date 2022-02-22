@@ -1,11 +1,13 @@
-import React from 'react';
-import Navbar from './components/Navbar';
+import { StyledEngineProvider } from "@mui/material";
+import React from "react";
+import Navbar from "./components/Navbar";
+import "./NavbarStyle.css";
 
 const App = () => {
   return (
-    <div>
+    <StyledEngineProvider injectFirst>
       <Navbar></Navbar>
-    </div>
+    </StyledEngineProvider>
   );
 };
 

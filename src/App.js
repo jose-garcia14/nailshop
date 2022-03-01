@@ -2,6 +2,7 @@ import { flexbox } from "@mui/system";
 import React from "react";
 import Navbar from "./components/Navbar";
 import ProductCard from "./components/ProductCard";
+import Banner from "./components/Banner";
 const listOfItems = [
   {
     image:
@@ -25,6 +26,7 @@ const App = () => {
         name="Cool Ass Nail"
         price={1.23}
       ></ProductCard> */}
+      <Banner></Banner>
       <div style={{ display: flexbox }}>
         <div style={{ textAlign: "center" }}>
           <h1>NEW ARRIVALS</h1>
@@ -39,19 +41,21 @@ const App = () => {
               height: 30,
               backgroundColor: "white",
               boxShadow: "none",
-              outlineColor: "#e8e8e8",
+              border: "2px solid #e8e8e8",
             }}
           >
             VIEW ALL
           </button>
         </div>
-        {listOfItems.map((product) => (
-          <ProductCard
-            name={product.name}
-            image={product.image}
-            price={product.price}
-          ></ProductCard>
-        ))}
+        <div>
+          {listOfItems.map((product) => (
+            <ProductCard
+              name={product.name}
+              image={product.image}
+              price={product.price}
+            ></ProductCard>
+          ))}
+        </div>
       </div>
     </>
   );
